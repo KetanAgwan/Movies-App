@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Tilt+Prism&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-size: 62.5%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header{
+	width: 100vw;
+	height: 9vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow:  -24px -24px 48px #5c91bd,
+	24px 24px 48px #99f1ff;
+	background:linear-gradient(to bottom, #ccffff,#ccffff);
+	border-radius: 0 0 10px 10px;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+#form{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.input-container{
+	height: 3.5rem;
+	width: 25rem;
+	padding: 0;
+	display: flex;
+	align-items:center;
+	justify-content: flex-start;
+	border-radius: 1rem;
+	padding: 5px;
+}
+
+
+.search{
+	height: 3rem;
+	width: 17rem;
+	margin: 1rem;
+	border-radius: .8rem;
+	padding: .5rem;
+	outline: none;
+	font-size: 1.2rem;
+	box-sizing: border-box;
+	border: 3px solid #6eaee3;
+}
+
+
+.searchBtn{
+	background:  #6eaee3;
+	width: 8rem;
+	height: 3rem;
+	border-radius: .8rem;
+	border:none;
+	background: linear-gradient(145deg, #83cfff, #6eaee3);
+	box-shadow:  5px 5px 10px #5c91bd,
+	-5px -5px 10px #99f1ff;
+	margin: 0;
+	cursor: pointer;
+	transition: 0.5s;
+	font-size: 1rem;
+}
+
+.searchBtn:hover{
+	background: linear-gradient(315deg, #83cfff, #6eaee3);
+	box-shadow:  -5px -5px 10px #5c91bd,
+	5px 5px 10px #99f1ff;
+}
+
+.blob1{
+	height: 10rem;
+	width: 30rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 0 0 100% 0;
+	background: #51ffff;
+	box-shadow:  -22px -22px 66px #329e9e,
+	22px 22px 66px #70ffff;
+	filter: blur(3px);
+	z-index: 1;
+}
+
+/*this is for container of movies*/
+.container{
+	width:100vw;
+	min-height: 90vh;
+	position: relative;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.blobs-container{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+}
+.blob2,.blob3{
+	height: 15rem;
+	width: 15rem;
+	background: linear-gradient(#57ffff, #57ffff);
+	/*	filter: blur(2px);*/
+}
+.blob2{
+	border-radius:  100% 0 0 0;
+	box-shadow:  22px 22px 88px #329e9e,
+	-22px -22px 88px #70ffff;
+}
+.blob3{
+	border-radius:   0 0 0 100%;
+	box-shadow:  
+	-22px -22px 88px #70ffff;
+}
+
+/*this css is for the movie card*/
+
+.card{
+	height: 30rem;
+	width: 20rem;
+	background-position: center;
+	background-size: cover;
+	border-radius: 15px;
+	overflow: hidden;
+	position: relative;
+	background: linear-gradient(45deg, #f0f0f0, #cacaca);
+	box-shadow:  7px -7px 14px #c5c5c5,
+	-7px 7px 14px #fbfbfb;
+	transition: all .1s;
+	margin :40px;
+}
+
+.img{
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+}
+
+.card-desc{
+	width: 100%;
+	max-height: 80%;
+	position: absolute;
+	bottom: 0;
+	z-index: 5;
+	font-size: 1rem;
+	padding: 10px;
+	box-sizing: border-box;
+	line-height: 1.6rem;
+	display: none;
+	scrollbar-width:none;
+	background: rgba(255,255,255,0.7);
+	backdrop-filter: blur(8px);
+	border-radius: 15px 15px 0 0;
+}
+.card-desc-headings{
+	font-size: 1.2rem;
+	margin:5px 0;
+	color: #16bae3;
+}
+
+.card:hover .card-desc{
+	display: block;
+	min-height: 2rem;
+	overflow-y: scroll;
+}
+
+.card:hover{
+	-webkit-box-shadow: 0px -1px 90px 0px rgba(88,197,227,1);
+	-moz-box-shadow: 0px -1px 90px 0px rgba(88,197,227,1);
+	box-shadow: 0px -1px 90px 0px rgba(88,197,227,1);
+	transform: scale(1.01);
+}
+
+.card-name{
+	width: 100%;
+	height: 6rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-position: white;
+	position: absolute;
+	bottom: 0;
+	z-index: 5;
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	padding: 1rem;
+	gap:1rem;
+	background: rgba(255,255,255,0.7);
+	backdrop-filter: blur(5px);
+}
+
+.rating{
+	border:2px solid #5c91bd;
+	height: 60%;
+	display:grid;
+	place-items:center;
+	box-sizing: border-box;
+	padding: 3px;
+}
+
+.card:hover .card-name{
+	display: none;
+} 
+
+/* these are the rating color classes for js */
+.green{
+	color:rgb(67, 234, 67);
+}
+.orange{
+	color:rgb(219, 101, 17);
+}
+.red{
+	color:rgb(243, 39, 39);
+}
+
+/* this css is for error 40 */
+.error-container{
+	height: 80%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 100px;
+	font-family: 'Tilt Prism', cursive;
+	gap: 2rem;
+}
+
+.error-img{
+	height: 50%;
+	width: 50%;
+	animation: animate 2s infinite;
+}
+.error-desc{
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.error{
+	display: none;
+}
+
+@keyframes animate{
+	40%{
+		transform: translateY(-20px);
+	}
+	105%{
+		transform: translateY(20px);
+	}
+}
+/* this is for no data found error  */
+.no-data{
+	font-size: 5rem;
+	color: #16bae3;
+}
+
+.ufo{
+	width: 3rem;
+}
+
+.ufo-1{
+	animation: animate 3s linear infinite;
+}
+.ufo-2{
+	margin-bottom: 30px;
+	width: 80px;
+}
+/* media queries for the mobile phone */
+@media screen and (max-width: 1080px) {
+	header{
+		width: 100vw;
+		height: 200px;
+	}
+	.input-container{
+		height: 100%;
+		width: 100%;
+		padding: 5px;
+	}
+	.card{
+		height: 1300px;
+		width: 80vw;
+		margin: 20px;
+		margin-top: 40px;
+	}
+
+	.search{
+		height: 70%;
+		width: 60%;
+		margin: 1rem;
+		font-size: 3rem;
+	}
+
+	.searchBtn{
+		width:25%;
+		height: 70%;
+		font-size: 3rem;
+	}
+
+	.card-desc{
+		width: 100%;
+		max-height: 80%;
+		font-size: 2rem;
+		line-height: 3rem;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	.card-desc-headings{
+		font-size: 2.5rem;
+		margin:5px 0;
+		color: #16bae3;
+	}
+	.card-name{
+		width: 100%;
+		height: 15%;
+		font-size: 2.5rem;
+	}
+
+	.rating{
+		height: 60%;
+		padding: 10px;
+	}
+  }
+
+
